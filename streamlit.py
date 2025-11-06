@@ -27,7 +27,7 @@ elif user_option == 'Analytics':
 
     # plotting the pie chart for flights and their frequencies
     airline,frequency = db.fetch_flights_frequency()
-    # code of plotly pie chart from GPT
+    # code of plotly pie chart from documentation
     labels = airline
     values = frequency
     fig = go.Figure(data=[go.Pie(labels=labels, values=values)])

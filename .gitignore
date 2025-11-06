@@ -1,0 +1,18 @@
+# Ignore Python bytecode and cache
+__pycache__/
+*.pyc
+
+# Ignore virtual environment
+.venv/
+
+# Ignore Jupyter notebook checkpoints (if any)
+.ipynb_checkpoints/
+
+# Ignore OS/system files
+.DS_Store
+Thumbs.db
+
+# Ignore environment variables/secrets (if in a separate file)
+.env
+
+# Ignore other unwanted folders/files if needed

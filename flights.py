@@ -18,6 +18,7 @@ import mysql.connector
 class DB:
 
     # we will make a constructor
+
     def __init__(self):
         # connect to the database
         try:
@@ -32,6 +33,7 @@ class DB:
         except:
             print('connection error')
     
+    # Airline piechart(no. of flights of which company)
     def fetch_city_names(self):
 
         city = []
@@ -48,6 +50,7 @@ class DB:
         
         return city
     
+    # showcasing in dataframe
     def fetch_all_flights(self,source,destination):
         self.mycursor.execute("""
         select Airline,Route,Dep_Time,Duration,Price from flights.flights_table
@@ -57,6 +60,7 @@ class DB:
         data = self.mycursor.fetchall()
         return data
 
+    # number of flights line chart
     def fetch_flights_frequency(self):
 
         airline = []
@@ -74,6 +78,7 @@ class DB:
 
         return airline,frequency   
     
+    # busy airport bar chart
     def busy_airport(self):
 
         city = []
@@ -95,6 +100,7 @@ class DB:
         return city,frequency   
 
 
+    # Daily number of flights 
     def daily_frequency(self):
         date = []
         frequency = []
